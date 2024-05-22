@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: rgba(255, 255, 255, 0.88);
+  background-color: #000b42;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  flex: 1;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.1;
+  padding: 0 20px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+footer {
+  background-color: #144365;
+  padding: 1rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #a8d3ff;
+  color: #000b42;
+  box-shadow: 0px 2px 1px 0px rgba(228, 243, 255, 1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0px 5px 5px 0px rgba(228, 243, 255, 1);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.menu-item > strong {
+  font-size: 25px;
+  padding: 15px 25px;
+  text-align: center;
+}
+
+.subtopic {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 20px;
+  text-wrap: pretty;
+  margin-top: 10px;
+}
+
+.topic-img {
+  display: block;
+  max-width: 750px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+ul {
+  font-size: 20px;
+  padding-left: 60px;
+}
