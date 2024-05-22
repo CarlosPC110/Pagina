@@ -322,43 +322,281 @@
       <section>
         <strong class="subtopic">1.2.2.1 Conceptos basicos del manejo de la memoria.</strong>
         <p class="text">
-          En la arquitectura de computadoras, la memoria se refiere a un conjunto de dispositivos que almacenan datos e
-          instrucciones de forma temporal o permanente. La memoria es esencial para el funcionamiento de una
-          computadora, ya que permite que la CPU acceda a los datos e instrucciones que necesita para realizar sus
-          operaciones.
+          La memoria es un componente fundamental de cualquier computadora, ya que permite almacenar datos e
+          instrucciones que son esenciales para su funcionamiento. El manejo de la memoria se refiere a las técnicas y
+          estrategias que se utilizan para administrar de manera eficiente la memoria disponible en un sistema
+          informático.
         </p>
-        <br />
-        <ul>
-          <li>Memoria principal (RAM): La memoria principal, también conocida como memoria de acceso aleatorio (RAM), es
-            un tipo de memoria volátil que almacena los datos e instrucciones que la CPU está utilizando actualmente. La
-            RAM es muy rápida, pero se borra cuando se apaga la computadora.</li>
-          <li>Memoria caché: La memoria caché es un tipo de memoria de alta velocidad que se utiliza para almacenar
-            datos e instrucciones que la CPU utiliza con frecuencia. La memoria caché es más pequeña que la RAM, pero es
-            mucho más rápida.</li>
-          <li>Memoria secundaria: La memoria secundaria es un tipo de memoria no volátil que se utiliza para almacenar
-            datos e instrucciones de forma permanente. La memoria secundaria es más lenta que la RAM, pero es mucho más
-            barata y puede almacenar mucha más información. Algunos ejemplos de memoria secundaria incluyen discos
-            duros, unidades de estado sólido (SSD) y discos ópticos.</li>
-          <li>Memoria ROM: La memoria ROM, también conocida como memoria de solo lectura, es un tipo de memoria no
-            volátil que almacena datos e instrucciones que no se pueden modificar. La memoria ROM se utiliza para
-            almacenar firmware y otros datos que no cambian con frecuencia.</li>
-        </ul>
-        <br />
-        <p class="text">
-          Jerarquía de Memoria<br />
-          La memoria en una computadora se organiza en una jerarquía de acuerdo a su velocidad y costo.
-        </p>
-        <ul>
-          <li>Memoria caché: La CPU primero busca los datos e instrucciones en la memoria caché.</li>
-          <li>Memoria RAM: Si los datos e instrucciones no están en la memoria caché, la CPU los busca en la memoria
-            RAM.</li>
-          <li>Memoria secundaria: Si los datos e instrucciones no están en la RAM, la CPU los busca en la memoria
-            secundaria.</li>
-          <li>Memoria ROM: Si los datos e instrucciones no están en la memoria secundaria, la CPU los busca en la
-            memoria ROM.</li>
-        </ul>
-        <img class="topic-img" src="../images/unidad1/memo.png" alt="" />
       </section>
+
+      <!-- Subtema 1.2.3.2 Memoria principal. -->
+      <section>
+        <strong class="subtopic">1.2.3.2 Memoria principal.</strong>
+        <p class="text">
+          La memoria principal, también conocida como memoria de acceso aleatorio (RAM), es un tipo de memoria volátil
+          que almacena datos e instrucciones que se están utilizando actualmente por el procesador y otros programas. La
+          RAM es rápida, pero pierde su contenido cuando se apaga la computadora o se reinicia.<br /><br />
+          Volatilidad: La RAM es una memoria volátil, lo que significa que pierde su contenido cuando se pierde la
+          alimentación. Esto se debe a que los datos se almacenan en condensadores que se descargan cuando se apaga la
+          computadora.<br /><br />
+          Velocidad: La RAM es un tipo de memoria muy rápido, lo que permite al procesador acceder a los datos de manera
+          rápida y eficiente. Esto es esencial para el buen rendimiento del sistema.<br /><br />
+          Capacidad: La capacidad de la RAM se mide en gigabytes (GB). Las computadoras modernas generalmente tienen de
+          4 GB a 32 GB de RAM, o incluso más.<br /><br />
+          Acceso aleatorio: La RAM se denomina memoria de acceso aleatorio porque el procesador puede acceder a
+          cualquier ubicación de la memoria en cualquier momento. Esto es diferente de la memoria secundaria, como los
+          discos duros, donde el procesador debe acceder a los datos en un orden secuencial.
+
+        </p>
+      </section>
+
+      <!-- Subtema 1.2.3.2 Memoria caché. -->
+      <section>
+        <strong class="subtopic">1.2.3.2 Memoria caché.</strong>
+        <p class="text">
+          La memoria caché es un tipo de memoria de alta velocidad que almacena una copia de los datos e instrucciones
+          que se utilizan con más frecuencia. Se encuentra entre la memoria principal (RAM) y el procesador, y permite
+          acceder a los datos de manera más rápida.<br /><br />
+          Velocidad: La memoria caché es mucho más rápida que la memoria principal, lo que permite al procesador acceder
+          a los datos de manera más rápida y eficiente.<br /><br />
+          Tamaño: La memoria caché es mucho más pequeña que la memoria principal. Esto se debe a que es más cara de
+          fabricar que la memoria principal.<br /><br />
+          Volatilidad: La memoria caché es volátil, lo que significa que pierde su contenido cuando se apaga la
+          computadora. Sin embargo, esto no es un problema importante, ya que la memoria caché se rellena
+          automáticamente con los datos más recientes cuando se enciende la computadora.
+        </p>
+      </section>
+
+      <!-- Subtema 1.2.3 Manejo de la entrada/sailda. -->
+      <section>
+        <strong class="subtopic">1.2.3 Manejo de la entrada/sailda.</strong>
+        <p class="text">
+          El manejo de la entrada/salida (E/S) se refiere a las técnicas y mecanismos que se utilizan para transferir
+          datos entre una computadora y sus dispositivos periféricos, como teclados, monitores, impresoras, discos
+          duros, unidades de estado sólido y redes. Es un componente esencial de cualquier sistema informático, ya que
+          permite a los usuarios interactuar con la computadora y a la computadora interactuar con el mundo exterior.
+        </p>
+        <img class="topic-img" src="../images/unidad1/e-s.jpeg" alt="" />
+      </section>
+
+      <!-- 1.2.3.2 Entrada/Salida programada. -->
+      <section>
+        <strong class="subtopic">1.2.3.2 Entrada/Salida programada.</strong>
+        <p class="text">
+          La Entrada/Salida Programada (E/S Programada) es un método de transferencia de datos entre la CPU y los
+          dispositivos periféricos en el que el programador tiene un control completo sobre el proceso. En este método,
+          el programa especifica explícitamente todas las instrucciones necesarias para realizar la operación de E/S,
+          incluyendo:
+        </p>
+        <br />
+        <ul>
+          <li>Selección del dispositivo periférico: El programa identifica el dispositivo periférico con el que se desea
+            comunicar.</li>
+          <li>Operación de E/S: El programa especifica la operación de E/S que se desea realizar, como leer o escribir
+            datos.</li>
+          <li>Dirección de memoria: El programa especifica la dirección de memoria donde se encuentran los datos que se
+            van a transferir.</li>
+          <li>Cantidad de datos: El programa especifica la cantidad de datos que se van a transferir.</li>
+        </ul>
+      </section>
+
+      <!-- 1.2.3.3 Entrada/Salida mediante interrupciones. -->
+      <section>
+        <strong class="subtopic">1.2.3.3 Entrada/Salida mediante interrupciones.</strong>
+        <p class="text">
+          La Entrada/Salida mediante interrupciones (E/S por interrupciones) es un método de transferencia de datos
+          entre la CPU y los dispositivos periféricos en el que el dispositivo periférico genera una interrupción cuando
+          necesita atención del procesador. Esto permite que el procesador maneje varios dispositivos periféricos al
+          mismo tiempo y reduce la cantidad de tiempo que el procesador pasa esperando a que los dispositivos
+          periféricos estén listos.<br /><br />
+          Pasos en la E/S por interrupciones:<br />
+          El dispositivo periférico genera una interrupción: Cuando el dispositivo periférico necesita atención del
+          procesador, genera una interrupción. Esta interrupción señala al procesador que el dispositivo periférico
+          tiene datos para transferir o necesita servicio.<br /><br />
+          El procesador guarda su estado actual: El procesador guarda su estado actual, incluyendo el registro del
+          programa contador y los registros de uso general, en la pila.<br /><br />
+          El procesador maneja la interrupción: El procesador determina la fuente de la interrupción y salta a la rutina
+          de servicio de interrupciones correspondiente. La rutina de servicio de interrupciones maneja la transferencia
+          de datos entre la memoria y el dispositivo periférico.<br /><br />
+          El procesador restaura su estado: Una vez que se completa la rutina de servicio de interrupciones, el
+          procesador restaura su estado anterior y continúa con la ejecución del programa.
+        </p>
+        <img class="topic-img" src="../images/unidad1/inter.jpg" alt="" />
+      </section>
+
+      <!-- 1.2.3.4 Acceso directo a memoria. -->
+      <section>
+        <strong class="subtopic">1.2.3.4 Acceso directo a memoria.</strong>
+        <p class="text">
+          El Acceso Directo a Memoria (DMA) es una técnica que permite a un dispositivo periférico transferir datos
+          directamente a la memoria principal del sistema, sin necesidad de la intervención del procesador central
+          (CPU). Esto significa que el procesador puede continuar con otras tareas mientras se realiza la transferencia
+          de datos, lo que puede mejorar significativamente el rendimiento del sistema.<br /><br />
+          Funcionamiento del DMA:<br />
+        </p>
+        <br />
+        <ol>
+          <li>Solicitud de DMA: El dispositivo periférico solicita una transferencia de DMA al controlador DMA.</li>
+          <li>Asignación de recursos: El controlador DMA asigna los recursos necesarios para la transferencia, como los
+            canales DMA y la memoria.</li>
+          <li>Configuración del controlador DMA: El controlador DMA se configura con la información de la transferencia,
+            como la dirección de origen (dispositivo periférico), la dirección de destino (memoria principal) y la
+            cantidad de datos a transferir.</li>
+          <li>Inicio de la transferencia: El controlador DMA inicia la transferencia de datos directamente entre el
+            dispositivo periférico y la memoria principal.</li>
+          <li>Supervisión de la transferencia: El controlador DMA supervisa la transferencia de datos y genera una
+            interrupción cuando se completa.</li>
+          <li>Manejo de la interrupción: El procesador maneja la interrupción y actualiza el estado del sistema.</li>
+        </ol>
+        <img class="topic-img" src="../images/unidad1/dma.png" alt="" />
+      </section>
+
+      <!-- 1.2.3.5 Canales y procesadores de entrada/salida -->
+      <section>
+        <strong class="subtopic">1.2.3.5 Canales y procesadores de entrada/salida</strong>
+        <p class="text">
+          Los canales de E/S son unidades de hardware que proporcionan una interfaz de alto nivel para la E/S.
+          Simplifican el proceso de E/S al encapsular las complejidades de la transferencia de datos entre la CPU y los
+          dispositivos periféricos. Los canales de E/S pueden manejar una variedad de tareas de E/S, como:<br /><br />
+
+          Transferencia de datos: Los canales de E/S pueden transferir datos entre la memoria principal y los
+          dispositivos periféricos de manera eficiente.<br /><br />
+          Detección de errores: Los canales de E/S pueden detectar errores durante la transferencia de datos y tomar las
+          medidas adecuadas para corregirlos o notificarlos al software.<br /><br />
+          Control de dispositivos: Los canales de E/S pueden controlar dispositivos periféricos, como configurarlos,
+          iniciar y detener operaciones, y monitorear su estado.<br /><br />
+          Tipos de canales:<br />
+        </p>
+        <ul>
+          <li>Canales programados: Los canales programados requieren que el programador especifique explícitamente las
+            instrucciones necesarias para realizar la operación de E/S.</li>
+          <li>Canales por DMA: Los canales por DMA (Acceso Directo a Memoria) permiten que los dispositivos periféricos
+            transfieran datos directamente a la memoria principal sin la intervención del procesador.</li>
+        </ul>
+      </section>
+
+      <!-- 1.2.4 Buses. -->
+      <section>
+        <strong class="subtopic">1.2.4 Buses.</strong>
+        <p class="text">
+          Un bus, también conocido como canal, es un sistema digital que permite la transferencia de datos entre los
+          componentes de una computadora o entre computadoras. Se compone de varias líneas físicas (cables o pistas en
+          un circuito impreso) por las cuales se transmiten los datos, las direcciones de memoria y las señales de
+          control.
+        </p>
+      </section>
+
+      <!-- 1.2.4.1 Tipos de buses. -->
+      <section>
+        <strong class="subtopic">1.2.4.1 Tipos de buses.</strong>
+        <p class="text">
+          Bus de datos:
+          <br />
+          Transporta los datos binarios que representan la información que se procesa en la computadora.
+          <br /><br />
+          Bus de direcciones:
+          <br />
+          Función: Indica la ubicación de memoria o el dispositivo periférico de origen o destino de los datos que
+          viajan por el bus de datos.
+          <br /><br />
+          Bus de control:
+          <br />
+          Transporta las señales de control que coordinan las transferencias de datos por el bus de datos.
+          <br /><br />
+          Bus frontal (FSB o Front Side Bus):
+          <br />
+          Conecta la CPU con la memoria principal (RAM) y el chipset.
+          <br /><br />
+          Bus de expansión:
+          <br />
+          Permite conectar tarjetas de expansión (gráficas, de sonido, de red, etc.) a la placa base.
+          <br /><br />
+          Bus de E/S (Entrada/Salida):
+          <br />
+          Conecta la CPU con los dispositivos periféricos (teclado, mouse, impresora, disco duro, etc.).
+          <br /><br />
+          Bus de red:
+          <br />
+          Permite la comunicación entre computadoras y otros dispositivos en una red.
+          <br /><br />
+        </p>
+      </section>
+
+      <!-- 1.2.4.2 Estructura de los buses. -->
+      <section>
+        <strong class="subtopic">1.2.4.2 Estructura de los buses.</strong>
+        <p class="text">
+          La estructura de un bus define la organización física y lógica de sus componentes, permitiendo la
+          transferencia eficiente de datos entre los elementos del sistema informático.
+          <br /><br />
+          Líneas de datos: Son las vías por las que se transmiten los datos binarios que representan la información. El
+          ancho del bus de datos determina la cantidad de bits que se pueden transferir simultáneamente, lo que afecta
+          la velocidad de transmisión. Los buses de datos modernos pueden tener anchos de 64, 128, 256 o incluso 512
+          bits.
+          <br /><br />
+          Líneas de direcciones: Indican la ubicación de memoria o el dispositivo periférico de origen o destino de los
+          datos que viajan por el bus de datos. El ancho del bus de direcciones determina el rango de direcciones que
+          puede acceder el sistema. Un bus de direcciones más ancho permite acceder a una mayor cantidad de memoria o
+          dispositivos.
+          <br /><br />
+          Líneas de control: Transportan las señales que coordinan las transferencias de datos por el bus de datos.
+          Estas señales indican el tipo de operación que se está realizando (lectura, escritura, selección de
+          dispositivo, interrupciones, etc.) y sincronizan el flujo de información entre los componentes.
+          <br /><br />
+          Arbitraje de bus: Es el mecanismo que regula el acceso al bus cuando varios dispositivos solicitan usarlo
+          simultáneamente. Existen diferentes estrategias de arbitraje, como el round robin, la prioridad fija o el bus
+          maestro-esclavo.
+        </p>
+      </section>
+
+      <!-- 1.2.4.3 Jerarquias de buses. -->
+      <section>
+        <strong class="subtopic">1.2.4.3 Jerarquias de buses.</strong>
+        <p class="text">
+          En el mundo de la computación, los buses funcionan como vías de comunicación que permiten la transferencia de
+          información entre los diferentes componentes de un sistema. Para optimizar el rendimiento y la eficiencia, se
+          suele emplear una estructura jerárquica de buses, donde buses de distintos niveles se interconectan para
+          formar una red de comunicación organizada.
+          <br /><br />
+          Bus interno del procesador (CPU): Es el bus más rápido del sistema y se encarga de la comunicación interna
+          entre los componentes del procesador, como la caché y las unidades de ejecución. Su velocidad es crucial para
+          el rendimiento general del sistema.
+          <br /><br />
+          Bus frontal (FSB o Front Side Bus): Conecta la CPU con la memoria principal (RAM) y el chipset. Es un bus
+          crítico para el sistema, ya que determina la velocidad de intercambio de datos entre estos componentes. Su
+          ancho y velocidad son factores determinantes en el desempeño general de la computadora.
+          <br /><br />
+          Bus de sistema: También conocido como bus local, conecta el chipset con los buses de expansión y los
+          dispositivos periféricos rápidos, como tarjetas gráficas y discos duros de alta velocidad. Su ancho de banda
+          debe ser suficiente para manejar el tráfico de datos de estos dispositivos.
+          <br /><br />
+          Buses de expansión: Permiten conectar tarjetas de expansión (gráficas, de sonido, de red, etc.) a la placa
+          base. Existen diferentes tipos de buses de expansión, como PCI, PCI-Express y AGP, cada uno con sus
+          características y velocidades.
+          <br /><br />
+          Buses de E/S (Entrada/Salida): Conectan la CPU con los dispositivos periféricos más lentos, como teclado,
+          mouse, impresora, etc. Buses comunes de E/S incluyen ISA, PCI y USB.
+        </p>
+      </section>
+
+      <!-- 1.2.5 Interrupciones. -->
+      <section>
+        <strong class="subtopic">1.2.4 Buses.</strong>
+        <p class="text">
+          las interrupciones (IRQ, Interrupt Request) son señales que ciertos dispositivos o eventos envían a la CPU
+          para solicitar su atención inmediata. Estas señales permiten que la CPU suspenda temporalmente la ejecución de
+          la tarea actual para atender la solicitud, y luego retome la tarea desde donde la dejó una vez que la
+          solicitud se haya completado.
+          <br /><br />
+          Interrupciones por hardware: Son generadas por dispositivos físicos, como teclados, ratones, discos duros o
+          redes, cuando necesitan la atención de la CPU.
+          <br/><br/>
+          Interrupciones por software: Son generadas por el propio software, ya sea por errores en la ejecución del
+          programa o por la necesidad de realizar tareas específicas, como la gestión del tiempo o la atención a eventos
+          del sistema operativo.
+        </p>
+      </section>
+
     </main>
     <footer>&copy; 2024 - Carlos Alberto Peña Castillo</footer>
   </div>
