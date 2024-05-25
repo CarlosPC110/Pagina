@@ -9,6 +9,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -77,7 +78,7 @@ a {
   object-fit: cover;
 }
 
-.menu-item > strong {
+.menu-item>strong {
   font-size: 25px;
   padding: 15px 25px;
   text-align: center;
@@ -89,15 +90,20 @@ a {
 }
 
 .text {
-  font-size: 20px;
+  font-size: 19px;
   text-wrap: pretty;
   margin-top: 10px;
 }
 
-.topic-img {
-  display: block;
-  max-width: 750px;
+.topic-figure {
+  display: flex;
+  justify-content: center;
+  max-width: 700px;
   margin: 0 auto;
+}
+
+.topic-img {
+  max-width: 100%;
   border-radius: 20px;
   margin-top: 25px;
 }
@@ -106,6 +112,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 80px;
+  margin: initial;
+  margin-left: 240px;
 }
 
 ul {
@@ -116,4 +124,59 @@ ul {
 ol {
   font-size: 20px;
   padding-left: 60px;
+}
+
+.layout {
+  display: flex;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  width: 240px;
+  border-right: 1px solid #706b6b;
+}
+
+nav>ol {
+  font-size: 16px;
+  padding: 50px 20px;
+  list-style: none;
+}
+
+.center-cont {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 750px) {
+  nav {
+    display: none
+  }
+
+  .contenido {
+    margin: 0;
+  }
+}
+
+.buttons {
+  text-align: right;
+  margin-top: 20px;
+  text-align: right;
+  width: 88%;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #011f49;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }

@@ -1,20 +1,504 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/index.css" />
-    <title>Unidad 2</title>
-  </head>
-  <body>
-    <div id="app">
-      <header>
-        <h1>Unidad 2</h1>
-      </header>
-      <main>
 
-      </main>
-      <footer>&copy; 2024 - Carlos Alberto Peña Castillo</footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/index.css" />
+  <title>Unidad 2</title>
+</head>
+
+<body>
+  <header>
+    <div class="buttons">
+      <button onclick="window.location.href = '../index.html';">Menu</button>
+      <button onclick="window.location.href = 'unidad1.html';">Unidad 1</button>
+      <button onclick="window.location.href = '';">Unidad 2</button>
+      <button onclick="window.location.href = 'unidad3.html';">Unidad 3</button>
+      <button onclick="window.location.href = 'unidad4.html';">Unidad 4</button>
+      <button onclick="window.location.href = 'practicas.html';">Practicas</button>
+      <button onclick="window.location.href = 'Tareas.html';">Tareas</button>
     </div>
-  </body>
+  </header>
+  <div id="app">
+    <div class="layout">
+      <nav>
+        <ol>
+          <li><a href="#2.1 Organización del procesador.">2.1 Organización del procesador.</a></li><br>
+          <li><a href="#2.2 Estructura de registros.">2.2 Estructura de registros.</a></li><br>
+          <li><a href="#2.2.1 Registros visibles para el usuario.">2.2.1 Registros visibles para el usuario.</a></li><br>
+          <li><a href="#2.2.2 Registros de control y de estados.">2.2.2 Registros de control y de estados.</a></li><br>
+          <li><a href="#2.2.3 Ejemplos de registros de CPU reales.">2.2.3 Ejemplos de registros de CPU reales.</a></li><br>
+          <li><a href="#2.3 El ciclo de instrucción.">2.3 El ciclo de instrucción.</a></li><br>
+          <li><a href="#2.3.1 Ciclo Fetch-Decode-Execute.">2.3.1 Ciclo Fetch-Decode-Execute.</a></li><br>
+          <li><a href="#2.3.2 Segmentación de instrucciones.">2.3.2 Segmentación de instrucciones.</a></li><br>
+          <li><a href="#2.3.3 Conjunto de instrucciones, Caracteristicas y funciones.">2.3.3 Conjunto de instrucciones, Caracteristicas y funciones.</a></li><br>
+          <li><a href="#2.3.4 Modos de direccionamiento.">2.3.4 Modos de direccionamiento.</a></li><br>
+          <li><a href="#2.4 Casos de estudio de CPU reales.">2.4 Casos de estudio de CPU reales.</a></li><br>
+        </ol>
+      </nav>
+      
+      <div class="center-cont">
+        <main class="contenido">
+          <h1>Unidad 2</h1>
+          <!-- Subtema 2.1 Organización del procesador.-->
+          <section id="2.1 Organización del procesador.">
+            <strong class="subtopic">2.1 Organización del procesador.</strong>
+            <p class="text">
+              La organización del procesador se refiere a la disposición de sus componentes internos y la forma en que
+              interactúan entre sí para llevar a cabo las instrucciones. La organización típica de un procesador moderno
+              incluye las siguientes unidades principales:
+              <br /><br />
+              Unidad de control (UC): Es el "cerebro" del procesador, responsable de dirigir y coordinar las operaciones
+              de
+              las demás unidades. La UC decodifica las instrucciones del programa, las divide en pasos más pequeños y
+              las
+              envía a las unidades correspondientes para su ejecución.
+              <br /><br />
+              Unidad aritmético-lógica (ALU): Es el "corazón" del procesador, donde se realizan las operaciones
+              aritméticas
+              y lógicas sobre los datos. La ALU puede sumar, restar, multiplicar, dividir, comparar y realizar
+              operaciones
+              lógicas como AND, OR y NOT.
+              <br /><br />
+              Registros: Son pequeñas unidades de memoria de alta velocidad que almacenan datos temporalmente durante la
+              ejecución del programa. Los registros se utilizan para almacenar operandos, instrucciones, direcciones de
+              memoria y resultados de las operaciones.
+              <br /><br />
+              Caché: Es una memoria de alta velocidad que almacena copias de datos e instrucciones que se utilizan con
+              frecuencia. La caché se encuentra dentro del procesador y permite acceder a los datos y las instrucciones
+              de
+              manera más rápida que acceder a la memoria principal, que es más lenta.
+              <br /><br />
+              Bus: Es el sistema de comunicación que permite a las diferentes unidades del procesador intercambiar datos
+              y
+              señales de control. El bus incluye líneas de datos, direcciones y control.
+              <br /><br />
+              Unidad de punto flotante (FPU): Es una unidad opcional que se encarga de realizar operaciones aritméticas
+              con
+              números de punto flotante, como números con decimales. La FPU es especialmente útil para aplicaciones
+              científicas y de ingeniería que requieren cálculos complejos con números de punto flotante.
+              <br /><br />
+              Reloj: Es un dispositivo que genera señales de sincronización que controlan el ritmo de las operaciones
+              del
+              procesador. La velocidad del reloj se mide en hercios (Hz) e indica la cantidad de ciclos de reloj por
+              segundo. Un procesador con un reloj más rápido puede ejecutar más instrucciones por segundo que un
+              procesador
+              con un reloj más lento.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad2/orga.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 2.2 Estructura de registros.-->
+          <section id="2.2 Estructura de registros.">
+            <strong class="subtopic">2.2 Estructura de registros.</strong>
+            <p class="text">
+              La estructura de registros se refiere a la organización y disposición de los registros dentro de un
+              procesador
+              o un sistema informático. Los registros son pequeñas unidades de memoria de alta velocidad que almacenan
+              datos
+              temporalmente durante la ejecución de un programa o proceso. Una estructura de registros bien diseñada
+              puede
+              mejorar significativamente el rendimiento del sistema al reducir el acceso a la memoria principal, que es
+              más
+              lenta.
+              <br /><br />
+              Registros de propósito general (GPR): Estos registros pueden almacenar cualquier tipo de dato, como
+              números,
+              caracteres, direcciones de memoria o punteros. Los GPR se utilizan con frecuencia para almacenar
+              operandos,
+              resultados de operaciones y variables locales de los programas.
+              <br /><br />
+              Registros de índice: Se utilizan principalmente para almacenar índices de memoria, que son direcciones de
+              memoria que se utilizan para acceder a datos específicos en la memoria principal. Los registros de índice
+              pueden mejorar el rendimiento al permitir un acceso más rápido a los datos.
+              <br /><br />
+              Registros de base: Se utilizan junto con los registros de índice para formar direcciones de memoria
+              efectivas.
+              Los registros de base suelen contener la dirección de inicio de un área de memoria, mientras que los
+              registros
+              de índice contienen el desplazamiento dentro de esa área.
+              <br /><br />
+              Registros de estado: Almacenan información sobre el estado del procesador o del sistema, como el modo de
+              operación, el estado de las interrupciones y el valor del contador de programa. Los registros de estado
+              son
+              esenciales para el correcto funcionamiento del procesador y del sistema operativo.
+              <br /><br />
+              Registros de pila: Se utilizan para implementar la pila de llamadas, una estructura de datos que almacena
+              las
+              direcciones de retorno de las subrutinas y las funciones. La pila de llamadas es esencial para el manejo
+              de
+              llamadas a subrutinas y para la gestión de la memoria dinámica.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad2/resgis.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 2.2.1 Registros visibles para el usuario.-->
+          <section id="2.2.1 Registros visibles para el usuario.">
+            <strong class="subtopic">2.2.1 Registros visibles para el usuario.</strong>
+            <p class="text">
+              En el mundo de la computación, los registros visibles para el usuario son aquellos a los que el
+              programador
+              puede acceder y modificar directamente desde el lenguaje de programación. Estos registros son parte de la
+              arquitectura del procesador y permiten al programador optimizar el uso de la CPU y mejorar el rendimiento
+              del
+              programa.
+              <br /><br />
+              Registros de propósito general (GPR): Son los registros más comunes y pueden almacenar cualquier tipo de
+              dato,
+              como números, caracteres, direcciones de memoria o punteros. Los GPR se utilizan con frecuencia para
+              almacenar
+              operandos, resultados de operaciones y variables locales de los programas.
+              <br /><br />
+              Registros de índice: Se utilizan principalmente para almacenar índices de memoria, que son direcciones de
+              memoria que se utilizan para acceder a datos específicos en la memoria principal. Los registros de índice
+              pueden mejorar el rendimiento al permitir un acceso más rápido a los datos.
+              <br /><br />
+              Registros de base: Se utilizan junto con los registros de índice para formar direcciones de memoria
+              efectivas.
+              Los registros de base suelen contener la dirección de inicio de un área de memoria, mientras que los
+              registros
+              de índice contienen el desplazamiento dentro de esa área.
+              <br /><br />
+              Registros de estado: Almacenan información sobre el estado del procesador o del sistema, como el modo de
+              operación, el estado de las interrupciones y el valor del contador de programa. Los registros de estado
+              son
+              esenciales para el correcto funcionamiento del procesador y del sistema operativo.
+              <br /><br />
+              Registros de pila: Se utilizan para implementar la pila de llamadas, una estructura de datos que almacena
+              las
+              direcciones de retorno de las subrutinas y las funciones. La pila de llamadas es esencial para el manejo
+              de
+              llamadas a subrutinas y para la gestión de la memoria dinámica.
+              <br /><br />
+              En la arquitectura x86, los registros visibles para el usuario incluyen los registros EAX, EBX, ECX, EDX,
+              ESI,
+              EDI, EBP y ESP.
+              <br />
+              En la arquitectura ARM, los registros visibles para el usuario incluyen los registros R0 a R31.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad1/modelos-arqui.jpg" alt="" />
+            </figure>
+          </section>
+          <!-- 2.2.2 Registros de control y de estados.-->
+          <section id="2.2.2 Registros de control y de estados.">
+            <strong class="subtopic">2.2.2 Registros de control y de estados.</strong>
+            <p class="text">
+              En la arquitectura de computadoras, los registros de control y estado son un conjunto de registros
+              especiales
+              que no son visibles para el usuario y que son utilizados por la unidad de control (UC) del procesador para
+              controlar el funcionamiento del sistema y para almacenar información sobre el estado del procesador y del
+              programa en ejecución.
+              <br /><br />
+              Contador de programa (PC): Almacena la dirección de memoria de la siguiente instrucción que se debe
+              ejecutar.
+              La UC utiliza el PC para leer las instrucciones de la memoria y para controlar el flujo de ejecución del
+              programa.
+              <br /><br />
+              Registro de instrucción (IR): Almacena la instrucción que se está ejecutando actualmente. La UC decodifica
+              la
+              instrucción en el IR y la envía a las unidades funcionales correspondientes para su ejecución.
+              <br /><br />
+              Registro de estado del procesador (PSR): Almacena información sobre el estado del procesador, como el modo
+              de
+              operación (supervisor, usuario, interrupciones habilitadas/deshabilitadas), el nivel de privilegios y los
+              indicadores de condición. La UC utiliza el PSR para controlar el comportamiento del procesador y para
+              manejar
+              las excepciones.
+              <br /><br />
+              Registros de banderas: Almacenan información sobre el resultado de las operaciones aritméticas y lógicas.
+              La
+              UC utiliza las banderas para controlar el flujo de ejecución del programa y para tomar decisiones en base
+              a
+              los resultados de las operaciones.
+              <br /><br />
+              En la arquitectura x86, los registros de control y estado incluyen el PC, el IR, el PSR y las banderas CF,
+              PF,
+              AF, ZF, SF, IF, DF y OF.<br />
+              En la arquitectura ARM, los registros de control y estado incluyen el PC, el IR, el CPSR y las banderas
+              APSR,
+              N, Z, C, V, Q y GE.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad2/estru.png" alt="" />
+            </figure>
+          </section>
+          <!-- Subtema 2.2.3 Ejemplos de registros de CPU reales.-->
+          <section id="2.2.3 Ejemplos de registros de CPU reales.">
+            <strong class="subtopic">2.2.3 Ejemplos de registros de CPU reales.</strong>
+            <p class="text">
+              Arquitectura x86:<br />
+            </p>
+            <ul>
+              <li>Registros de propósito general (GPR): EAX, EBX, ECX, EDX, ESI, EDI, EBP, ESP</li>
+              <li>Registros de índice: ESI, EDI</li>
+              <li>Registros de base: EBP</li>
+              <li>Puntero de pila: ESP</li>
+              <li>Contador de programa: EIP</li>
+              <li>Registro de estado del procesador: EFLAGS</li>
+              <li>Registros de control: CR0, CR1, CR2, CR3, CR4</li>
+              <li>Registros de segmento: GS, FS, ES, DS, CS, SS</li>
+            </ul>
+            <br />
+            <p class="text">
+              Arquitectura ARM:<br />
+            </p>
+            <ul>
+              <li>Registros de propósito general (GPR): R0 a R31</li>
+              <li>Registros de índice: R13 (SP), R14 (LR)</li>
+              <li>Puntero de pila: SP</li>
+              <li>Contador de programa: PC</li>
+              <li>Registro de estado del procesador: CPSR</li>
+              <li>Registros de banderas: APSR, N, Z, C, V, Q, GE</li>
+            </ul>
+          </section>
+
+          <!-- Subtema 2.3 El ciclo de instrucción.-->
+          <section id="2.3 El ciclo de instrucción.">
+            <strong class="subtopic">2.3 El ciclo de instrucción.</strong>
+            <p class="text">
+              El ciclo de instrucción, también conocido como ciclo de fetch-execute o ciclo de fetch-decode-execute, es
+              el
+              proceso fundamental que realiza la unidad central de proceso (CPU) para ejecutar las instrucciones de un
+              programa. Este ciclo se repite constantemente durante la ejecución del programa, y cada ciclo consta de
+              cuatro
+              etapas principales:
+              <br /><br />
+
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad2/ciclo.png" alt="" />
+            </figure>
+          </section>
+
+          <!-- 2.3.1 Ciclo Fetch-Decode-Execute.-->
+          <section id="2.3.1 Ciclo Fetch-Decode-Execute.">
+            <strong class="subtopic">2.3.1 Ciclo Fetch-Decode-Execute.</strong>
+            <p class="text">
+              Captación (Fetch):
+              <br />
+              La unidad de control (UC) del procesador obtiene la siguiente instrucción del programa desde la memoria
+              principal.
+              <br />
+              La dirección de la instrucción se encuentra en el contador de programa (PC), que se incrementa
+              automáticamente después de cada instrucción para apuntar a la siguiente instrucción en la secuencia.
+              <br />
+              La instrucción se carga desde la memoria principal en el registro de instrucción (IR).
+              <br /><br />
+              Decodificación (Decode):
+              <br />
+              La UC decodifica la instrucción en el IR, es decir, la analiza y la divide en sus componentes básicos,
+              como
+              el
+              código de operación (opcode), los operandos y las direcciones de memoria.
+              <br />
+              El código de operación indica el tipo de operación que se debe realizar, como sumar, restar, mover datos o
+              saltar a otra instrucción.
+              <br />
+              Los operandos pueden ser valores inmediatos, direcciones de memoria o registros.
+              <br /><br />
+              Ejecución (Execute):<br />
+              La UC envía las señales de control necesarias a las unidades funcionales del procesador para que ejecuten
+              la
+              operación especificada por la instrucción.
+              <br />
+              Las unidades funcionales pueden ser la unidad aritmético-lógica (ALU), la unidad de punto flotante (FPU) o
+              las
+              unidades de entrada/salida (E/S).
+              <br />
+              La ALU realiza operaciones aritméticas y lógicas, como suma, resta, multiplicación y división.
+              <br />
+              La FPU realiza operaciones con números de punto flotante, como números con decimales.
+              <br />
+              Las unidades de E/S se encargan de la transferencia de datos entre la CPU y los dispositivos periféricos.
+              <br /><br />
+              Almacenamiento (Store):
+              <br />
+              Si la instrucción produce un resultado, la UC lo almacena en un registro o en una ubicación de memoria
+              específica.
+              <br />
+              El resultado puede ser el valor de una operación aritmética, una comparación lógica o la dirección de una
+              subrutina.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad2/Fetch.jpg" alt="" />
+            </figure>
+          </section>
+          <!-- Subtema 2.3.2 Segmentación de instrucciones.-->
+          <section id="2.3.2 Segmentación de instrucciones.">
+            <strong class="subtopic">2.3.2 Segmentación de instrucciones.</strong>
+            <p class="text">
+              La segmentación de instrucciones, también conocida como pipeline o pipeline de instrucciones, es una
+              técnica
+              de optimización del rendimiento que divide el ciclo de instrucción en etapas más pequeñas y superpuestas,
+              permitiendo que se ejecuten simultáneamente. Esto se compara con el ciclo de instrucción básico, donde
+              cada
+              etapa se completa secuencialmente antes de pasar a la siguiente.
+              <br /><br />
+              División en etapas: El ciclo de instrucción se divide en etapas más pequeñas y especializadas, como
+              captación,
+              decodificación, ejecución y almacenamiento.
+              <br /><br />
+              Superposición de etapas: Las etapas del pipeline se superponen, de modo que mientras una etapa se está
+              completando en una instrucción, las siguientes etapas se están ejecutando en otras instrucciones.
+              <br /><br />
+              Unidades especializadas: Cada etapa del pipeline se implementa en una unidad especializada del procesador,
+              como la unidad de captación, la unidad de decodificación, la unidad ALU y la unidad de almacenamiento.
+              <br /><br />
+              Flujo de datos: Las instrucciones fluyen a través del pipeline como una línea de montaje, con cada etapa
+              realizando su tarea específica y pasando la instrucción a la siguiente etapa.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad2/seg.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 2.3.3 Conjunto de instrucciones, Caracteristicas y funciones.-->
+          <section id="2.3.3 Conjunto de instrucciones, Caracteristicas y funciones.">
+            <strong class="subtopic">2.3.3 Conjunto de instrucciones, Caracteristicas y funciones.</strong>
+            <p class="text">
+              Un conjunto de instrucciones (ISA) es el conjunto de instrucciones que una CPU puede ejecutar. Define el
+              lenguaje de máquina específico que la CPU utiliza para comprender y llevar a cabo las operaciones. El ISA
+              incluye:
+              <br /><br />
+              Formatos de instrucción: La estructura y el diseño de las instrucciones, especificando cómo se codifican
+              los
+              diferentes tipos de operaciones, operandos y direcciones de memoria.
+              <br /><br />
+              Códigos de operación: Identificadores únicos para cada tipo de instrucción, como suma, resta, carga,
+              almacenamiento, salto condicional, etc.
+              <br /><br />
+              Modos de direccionamiento: Mecanismos para especificar la ubicación de los operandos en la memoria o en
+              los
+              registros.
+              <br /><br />
+              Registros: Unidades de memoria de alta velocidad dentro de la CPU para almacenar datos temporales y
+              direcciones.
+              <br /><br />
+              Tipos de datos: Los formatos de datos admitidos por la CPU, como números enteros, números de punto
+              flotante,
+              caracteres y cadenas.
+              <br /><br />
+              Caracteristicas:
+              <br />
+              Completitud: Un ISA completo debe ser capaz de expresar cualquier algoritmo computacional, aunque sea de
+              manera ineficiente.
+              <br /><br />
+              Simplicidad: Un ISA simple es más fácil de implementar, programar y optimizar.
+              <br /><br />
+              Ortogonalidad: Un ISA ortogonal permite que las instrucciones se combinen de manera flexible y eficiente.
+              <br /><br />
+              Eficiencia: Un ISA eficiente puede codificar instrucciones compactas y realizar operaciones con un mínimo
+              de
+              ciclos de reloj.
+              <br /><br />
+              Funciones:
+              <br />
+              Ejecución de programas: El ISA proporciona la base para que la CPU ejecute las instrucciones de un
+              programa.
+              <br /><br />
+              Optimización del compilador: El ISA influye en la forma en que los compiladores traducen el código fuente
+              de
+              alto nivel en código máquina.
+              <br /><br />
+              Arquitectura del procesador: El ISA define las características y funcionalidades básicas de la CPU.
+              <br /><br />
+              Compatibilidad: Un ISA compatible permite que los programas se ejecuten en diferentes CPUs que implementan
+              el
+              mismo conjunto de instrucciones.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad2/instru.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 2.3.4 Modos de direccionamiento.-->
+          <section id="2.3.4 Modos de direccionamiento.">
+            <strong class="subtopic">2.3.4 Modos de direccionamiento.</strong>
+            <p class="text">
+              Un modo de direccionamiento es un mecanismo utilizado por una instrucción de computadora para especificar
+              la
+              ubicación de un operando en la memoria o en un registro. El modo de direccionamiento determina cómo se
+              calcula
+              la dirección efectiva del operando, que es la dirección física en la memoria donde se encuentra el dato
+              real.
+              <br /><br />
+              Inmediato: El operando se especifica directamente en la instrucción, como un número literal o un carácter.
+              Este modo es simple y eficiente para valores pequeños, pero consume espacio en la instrucción.
+              <br /><br />
+              Directo o absoluto: La dirección efectiva del operando se especifica como una dirección de memoria
+              absoluta,
+              es decir, la dirección física en la memoria. Este modo es rápido para acceder a ubicaciones de memoria
+              conocidas, pero limita la portabilidad del programa a la memoria física específica.
+              <br /><br />
+              Registro: El operando se encuentra en un registro de la CPU. Este modo es muy rápido para acceder a datos
+              en
+              registros, ya que no requiere acceso a la memoria principal.
+              <br /><br />
+              Indirecto: La dirección efectiva del operando se almacena en un registro. La instrucción especifica el
+              registro que contiene la dirección, y luego la CPU utiliza esa dirección para acceder al operando en la
+              memoria. Este modo es flexible, ya que permite acceder a datos en cualquier lugar de la memoria, pero
+              puede
+              ser más lento que el modo directo.
+              <br /><br />
+              Base-desplazamiento: La dirección efectiva del operando se calcula sumando un valor de desplazamiento a un
+              valor base. El valor base puede ser un registro o una dirección de memoria absoluta, y el valor de
+              desplazamiento puede ser un número literal o un registro. Este modo es flexible y eficiente para acceder a
+              datos en estructuras de datos, como arreglos y matrices.
+              <br /><br />
+              Índice: Similar al modo base-desplazamiento, pero utiliza un registro índice en lugar de un valor de
+              desplazamiento. El registro índice se escala por un factor de tamaño de elemento y luego se suma al valor
+              base
+              para calcular la dirección efectiva. Este modo es común para acceder a elementos en arreglos.
+              <br /><br />
+              Relativo: La dirección efectiva del operando se calcula como un desplazamiento relativo a la dirección de
+              la
+              instrucción actual. Este modo es útil para acceder a datos locales dentro de una subrutina o función.
+              <br /><br />
+              Autoincremento y autodecremento: La dirección efectiva del operando se calcula utilizando un registro, y
+              luego
+              el valor del registro se incrementa o disminuye automáticamente después de acceder al operando. Este modo
+              es
+              útil para iterar sobre elementos en arreglos o listas.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad2/dire.png" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 2.4 Casos de estudio de CPU reales.-->
+          <section id="2.4 Casos de estudio de CPU reales.">
+            <strong class="subtopic">2.4 Casos de estudio de CPU reales.</strong>
+            <p class="text">
+              En informática, los modos de direccionamiento son las diferentes maneras de especificar un operando dentro
+              de
+              una instrucción en lenguaje ensamblador.
+              Un modo de direccionamiento especifica la forma de calcular la dirección de memoria efectiva de un
+              operando
+              mediante el uso de la información contenida en registros y/o constantes, contenida dentro de una
+              instrucción
+              de la máquina o en otra parte.
+              No existe una forma generalmente aceptada de nombrar a los distintos modos de direccionamiento. En
+              particular,
+              los distintos autores y fabricantes de equipos pueden dar nombres diferentes para el modo de hacer frente
+              al
+              mismo, o los mismos nombres, a los diferentes modos de direccionamiento.
+              Además, un modo de direccionamiento que en una determinada arquitectura se trata como un modo de
+              direccionamiento, puede representar la funcionalidad que en otra arquitectura está cubierto por dos o más
+              modos de direccionamiento.
+            </p>
+          </section>
+        <footer>&copy; 2024 - Carlos Alberto Peña Castillo</footer>
+        </main>
+      </div>
+    </div>
+
+  </div>
+</body>
+
 </html>

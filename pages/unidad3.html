@@ -1,20 +1,525 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/index.css" />
-    <title>Unidad 3</title>
-  </head>
-  <body>
-    <div id="app">
-      <header>
-        <h1>Unidad 3</h1>
-      </header>
-      <main>
-        
-      </main>
-      <footer>&copy; 2024 - Carlos Alberto Peña Castillo</footer>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/index.css" />
+  <title>Unidad 3</title>
+</head>
+
+<body>
+  <header>
+    <div class="buttons">
+      <button onclick="window.location.href = '../index.html';">Menu</button>
+      <button onclick="window.location.href = 'unidad1';">Unidad 1</button>
+      <button onclick="window.location.href = 'unidad2.html';">Unidad 2</button>
+      <button onclick="window.location.href = '';">Unidad 3</button>
+      <button onclick="window.location.href = 'unidad4.html';">Unidad 4</button>
+      <button onclick="window.location.href = 'practicas.html';">Practicas</button>
+      <button onclick="window.location.href = 'Tareas.html';">Tareas</button>
     </div>
-  </body>
+  </header>
+  <div id="app">
+    <div class="layout">
+      <nav>
+        <ol>
+          <li><a href="#3.1 Chipset">3.1 Chipset.</a></li><br>
+          <li><a href="#3.1.1 Unidad de procesamiento.">3.1.1 Unidad de procesamiento.</a></li><br>
+          <li><a href="#3.1.2 Controlador del Bus.">3.1.2 Controlador del Bus.</a></li><br>
+          <li><a href="#3.1.3 Puertas de Entrada/Salida.">3.1.3 Puertas de Entrada/Salida.</a></li><br>
+          <li><a href="#3.1.4 controlador de interrupciones.">3.1.4 controlador de interrupciones.</a></li><br>
+          <li><a href="#3.1.5 Controlador de Acceso Directo a Memoria.">3.1.5 Controlador de Acceso Directo a
+              Memoria.</a></li><br>
+          <li><a href="#3.1.6 circuitos de temporizacion.">3.1.6 circuitos de temporizacion.</a></li><br>
+          <li><a href="#3.1.7 Circuitos de control.">3.1.7 Circuitos de control.</a></li><br>
+          <li><a href="#3.1.8 Controladores de video.">3.1.8 Controladores de video.</a></li><br>
+          <li><a href="#3.2 Aplicaciones.">3.2 Aplicaciones.</a></li><br>
+          <li><a href="#3.2.1 Entrada/Salida">3.2.1 Entrada/Salida</a></li><br>
+          <li><a href="#3.2.2 Almacenamiento.">3.2.2 Almacenamiento.</a></li><br>
+          <li><a href="#3.2.3 Fuentes de alimentación.">3.2.3 Fuentes de alimentación.</a></li><br>
+          <li><a href="#3.3 Ambientes de servicio.">3.3 Ambientes de servicio.</a></li><br>
+          <li><a href="#3.3.1 Negocios.">3.3.1 Negocios.</a></li><br>
+          <li><a href="#3.3.2 Industria.">3.3.2 Industria.</a></li><br>
+          <li><a href="#3.3.3 Comercio electrónico.">3.3.3 Comercio electrónico.</a></li><br>
+        </ol>
+      </nav>
+      <div class="center-cont">
+        <main class=" contenido">
+          <h1>Unidad 3</h1>
+          <!-- Subtema 3.1 Chipset.-->
+          <section id="3.1 Chipset">
+            <strong class="subtopic">3.1 Chipset.</strong>
+            <p class="text">
+              Un conjunto de chips o chipset es un conjunto de circuitos electrónicos integrados en una sola placa de
+              circuito. Es esencialmente una colección de chips especializados que trabajan juntos para administrar el
+              flujo
+              de datos entre varios componentes en un sistema informático. Se puede pensar en él como el centro
+              neurálgico
+              que coordina la comunicación entre la CPU, la memoria, los dispositivos de almacenamiento y los
+              periféricos.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad3/chipset.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 3.1.1 Unidad de procesamiento.-->
+          <section id="3.1.1 Unidad de procesamiento.">
+            <strong class="subtopic">3.1.1 Unidad de procesamiento.</strong>
+            <p class="text">
+              La unidad central de procesamiento (CPU), también conocida como procesador o microprocesador, es el
+              componente
+              central de un ordenador que se encarga de interpretar las instrucciones contenidas en los programas y
+              procesar
+              los datos. Es considerado el "cerebro" de la computadora, ya que es responsable de realizar los cálculos y
+              operaciones lógicas que hacen posible el funcionamiento del sistema.
+              <br /><br />
+              Unidad de control (UC): Es el "director de orquesta" de la CPU. Controla el flujo de datos y señales entre
+              las
+              demás unidades, decodifica las instrucciones de los programas y las envía a las unidades correspondientes
+              para
+              su ejecución.
+              <br /><br />
+              Unidad aritmético-lógica (ALU): Es el "cerebro matemático" de la CPU. Se encarga de realizar operaciones
+              aritméticas (sumas, restas, multiplicaciones, divisiones) y operaciones lógicas (comparaciones, AND, OR,
+              etc.)
+              sobre los datos.
+              <br /><br />
+              Registros: Son unidades de memoria de alta velocidad dentro de la CPU que almacenan datos temporales y
+              resultados de operaciones. Permiten un acceso rápido a la información que se está procesando.
+              <br /><br />
+              Bus: Son canales de comunicación que permiten la transferencia de datos entre las diferentes unidades de
+              la
+              CPU y con la memoria principal.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad3/cpu.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 3.1.2 Controlador del Bus.-->
+          <section id="3.1.2 Controlador del Bus.">
+            <strong class="subtopic">3.1.2 Controlador del Bus.</strong>
+            <p class="text">
+              El controlador del bus es un circuito integrado (IC) que se encarga de gestionar el flujo de datos entre
+              diferentes componentes de un sistema informático a través de los buses. Actúa como un director de tráfico,
+              regulando el acceso de los dispositivos al bus, evitando colisiones de datos y asegurando una
+              transferencia
+              de
+              información eficiente.
+              <br /><br />
+              Arbitraje: Determina qué dispositivo tiene prioridad para acceder al bus en un momento dado. Esto evita
+              que
+              varios dispositivos intenten enviar datos al mismo tiempo, lo que podría provocar colisiones y errores.
+              <br /><br />
+              Temporización: Genera las señales de temporización necesarias para coordinar la transferencia de datos
+              entre
+              los dispositivos. Esto asegura que los datos se transmitan y reciban en el momento correcto.
+              <br /><br />
+              Detección y corrección de errores: Implementa mecanismos para detectar y corregir errores en la
+              transmisión
+              de
+              datos. Esto ayuda a garantizar la integridad de los datos que se transfieren por el bus.
+              <br /><br />
+              Traducción de direcciones: Convierte las direcciones de memoria físicas utilizadas por los dispositivos en
+              direcciones de bus compatibles con el tipo de bus específico. Esto permite que dispositivos con diferentes
+              esquemas de direccionamiento puedan comunicarse entre sí.
+              <br /><br />
+              Interfaz con el procesador: Proporciona una interfaz entre el procesador y el bus, permitiendo que el
+              procesador envíe y reciba datos de los dispositivos conectados al bus.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad3/bus.jpg" alt="" />
+            </figure>
+          </section>
+          <!-- Subtema 3.1.3 Puertas de Entrada/Salida.-->
+          <section id="3.1.3 Puertas de Entrada/Salida.">
+            <strong class="subtopic">3.1.3 Puertas de Entrada/Salida.</strong>
+            <p class="text">
+              Las puertas de Entrada/Salida (I/O) son interfaces físicas o electrónicas que permiten a un sistema
+              informático interactuar con el mundo exterior. Estas puertas actúan como puentes de comunicación entre la
+              computadora y los dispositivos periféricos, como teclados, ratones, impresoras, monitores, discos duros,
+              unidades flash, etc.
+              <br /><br />
+              Arbitraje: Determina qué dispositivo tiene prioridad para acceder al bus en un momento dado. Esto evita
+              que
+              varios dispositivos intenten enviar datos al mismo tiempo, lo que podría provocar colisiones y errores.
+              <br /><br />
+              Temporización: Genera las señales de temporización necesarias para coordinar la transferencia de datos
+              entre
+              los dispositivos. Esto asegura que los datos se transmitan y reciban en el momento correcto.
+              <br /><br />
+              Detección y corrección de errores: Implementa mecanismos para detectar y corregir errores en la
+              transmisión
+              de
+              datos. Esto ayuda a garantizar la integridad de los datos que se transfieren por el bus.
+              <br /><br />
+              Traducción de direcciones: Convierte las direcciones de memoria físicas utilizadas por los dispositivos en
+              direcciones de bus compatibles con el tipo de bus específico. Esto permite que dispositivos con diferentes
+              esquemas de direccionamiento puedan comunicarse entre sí.
+              <br /><br />
+              Interfaz con el procesador: Proporciona una interfaz entre el procesador y el bus, permitiendo que el
+              procesador envíe y reciba datos de los dispositivos conectados al bus.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad3/e-s.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 3.1.4 controlador de interrupciones.-->
+          <section id="3.1.4 controlador de interrupciones.">
+            <strong class="subtopic">3.1.4 Controlador de Interrupciones.</strong>
+            <p class="text">
+              El controlador de interrupciones es un circuito integrado (IC) que se encarga de gestionar las
+              interrupciones
+              en un sistema informático. Una interrupción es una señal que un dispositivo envía al procesador para
+              indicar
+              que necesita atención inmediata. El controlador de interrupciones determina qué dispositivo ha generado la
+              interrupción, prioriza las interrupciones y notifica al procesador para que tome las medidas oportunas.
+              <br /><br />
+              Tipos de Interrupciones:
+              <br />
+              Interrupciones por hardware: Son generadas por dispositivos de hardware, como teclados, ratones, discos
+              duros
+              y dispositivos de red.
+              <br /><br />
+              Interrupciones por software: Son generadas por programas de software, como cuando un programa intenta
+              acceder
+              a una dirección de memoria no válida o cuando se produce un error de cálculo.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad3/inter.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 3.1.5 controlador de acceso directo a memoria.-->
+          <section id="3.1.5 Controlador de Acceso Directo a Memoria.">
+            <strong class="subtopic">3.1.5 Controlador de Acceso Directo a Memoria.</strong>
+            <p class="text">
+              El controlador de acceso directo a memoria (DMA, por sus siglas en inglés: Direct Memory Access) es un
+              circuito integrado (IC) que permite a ciertos dispositivos periféricos acceder directamente a la memoria
+              principal del sistema para transferir datos sin necesidad de la intervención constante del procesador.
+              Esto
+              libera al procesador de la tarea de transferir datos entre la memoria y los periféricos, lo que mejora el
+              rendimiento general del sistema y permite al procesador dedicarse a otras tareas más importantes.
+              <br /><br />
+              Funcionamiento del controlador DMA:
+              <br />
+              Solicitud de DMA: El dispositivo periférico que necesita transferir datos envía una solicitud de DMA al
+              controlador DMA.
+              <br /><br />
+              Arbitraje de DMA: Si hay varias solicitudes de DMA pendientes, el controlador DMA arbitra qué solicitud
+              atender primero en función de una prioridad predefinida.
+              <br /><br />
+              Concesión de DMA: El controlador DMA concede la solicitud al dispositivo de mayor prioridad y le otorga el
+              control del bus del sistema.
+              <br /><br />
+              Transferencia de datos: El dispositivo periférico transfiere los datos directamente a la memoria principal
+              o
+              desde ella sin necesidad de que el procesador intervenga.
+              <br /><br />
+              Fin de la transferencia: Una vez que se ha completado la transferencia de datos, el dispositivo periférico
+              genera una señal de interrupción para notificarlo al controlador DMA.
+              <br /><br />
+              Liberación del bus del sistema: El controlador DMA libera el control del bus del sistema y lo deja
+              disponible
+              para que el procesador u otro dispositivo lo utilice.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad3/acceso.png" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 3.1.6 circuitos de temporizacion.-->
+          <section id="3.1.6 circuitos de temporizacion.">
+            <strong class="subtopic">3.1.6 Circuitos de Temporizacion.</strong>
+            <p class="text">
+              Los circuitos de temporización y control son componentes electrónicos que se encargan de generar señales
+              de
+              temporización y control en un sistema informático. Estas señales son esenciales para sincronizar las
+              operaciones de diferentes componentes del sistema y garantizar un funcionamiento correcto y eficiente.
+              <br /><br />
+              Funciones principales de los circuitos de temporización y control:
+              <br />
+              Generar señales de reloj: Proporcionan una señal de referencia de tiempo que sincroniza las operaciones de
+              diferentes componentes del sistema, como el procesador, la memoria y los periféricos.
+              <br /><br />
+              Controlar la secuencia de eventos: Definen la secuencia en la que se ejecutan las operaciones en el
+              sistema,
+              asegurando que cada componente realice su tarea en el momento adecuado.
+              <br /><br />
+              Generar señales de control: Proporcionan señales de control a otros componentes del sistema para
+              indicarles
+              qué operación deben realizar o cuándo deben iniciarla.
+              <br /><br />
+              Medir el tiempo: Permiten medir intervalos de tiempo precisos, lo que es necesario para diversas funciones
+              del
+              sistema, como la comunicación en serie y la generación de tonos de audio.
+            </p>
+          </section>
+
+          <!-- Subtema 3.1.7 Circuitos de control.-->
+          <section id="3.1.7 Circuitos de control.">
+            <strong class="subtopic">3.1.7 Circuitos de control.</strong>
+            <p class="text">Los circuitos de control son fundamentales en la operación de sistemas digitales y
+              computacionales, ya que se encargan de gestionar y dirigir el flujo de datos y las señales dentro del
+              sistema. Estos circuitos interpretan las instrucciones desde la memoria y generan las señales necesarias
+              para activar las operaciones correspondientes en otras partes del sistema, como la unidad
+              aritmético-lógica (ALU), los registros y los buses de datos. En esencia, los circuitos de control
+              coordinan todas las actividades internas de la CPU, asegurando que cada componente opere en el momento
+              correcto y de la manera correcta.
+              <br /><br />
+              Existen diferentes tipos de circuitos de control, como los controladores cableados (hardwired control) y
+              los controladores basados en microprogramación (microprogrammed control). Los controladores cableados
+              utilizan un diseño fijo de lógica combinacional para generar señales de control, lo que permite una
+              operación muy rápida pero con menor flexibilidad. Por otro lado, los controladores microprogramados
+              utilizan una memoria de control que almacena un conjunto de microinstrucciones, proporcionando mayor
+              flexibilidad y facilidad para implementar cambios o actualizaciones en el conjunto de instrucciones. Ambos
+              tipos de circuitos de control son cruciales para el funcionamiento eficiente y preciso de los procesadores
+              y sistemas digitales modernos.
+
+            </p>
+            <img class="topic-img" src="../images/unidad3/7.png" alt="" />
+          </section>
+
+          <!-- Subtema 3.1.8 Controladores de video.-->
+          <section id="3.1.8 Controladores de video.">
+            <strong class="subtopic">3.1.8 Controladores de video.</strong>
+            <p class="text">
+              Los controladores de video son circuitos integrados (IC) que se encargan de procesar y generar las señales
+              de
+              video que se muestran en el monitor de una computadora. Estos controladores actúan como intermediarios
+              entre
+              el procesador de la computadora y la pantalla, traduciendo los datos de la memoria de video en señales de
+              video compatibles con el monitor.
+              <br /><br />
+              Funciones principales de los controladores de video:
+              <br />
+              Acceso a la memoria de video: Acceden a la memoria de video para leer los datos de la imagen que se va a
+              mostrar.
+              <br /><br />
+              Procesamiento de datos de video: Procesan los datos de la imagen para aplicar efectos gráficos, escalar la
+              imagen y ajustar los colores.
+              <br /><br />
+              Generación de señales de sincronización: Generan las señales de sincronización horizontal y vertical que
+              controlan el tiempo en que se actualiza la imagen en la pantalla.
+              <br /><br />
+              Conversión de digital a analógico (D/A): Convierten los datos digitales de la memoria de video en señales
+              analógicas de video que el monitor puede entender.
+              <br /><br />
+              Comunicación con el monitor: Se comunican con el monitor para establecer la resolución, la frecuencia de
+              actualización y otros parámetros de visualización.
+            </p>
+          </section>
+
+          <!-- Subtema 3.2 Aplicaciones.-->
+          <section id="3.2 Aplicaciones.">
+            <strong class="subtopic">3.2 Aplicaciones.</strong>
+            <p class="text">
+              En informática, un periférico de entrada/salida o E/S (en inglés: input/output o I/O) es aquel tipo de
+              dispositivo periférico de un computador capaz de interactuar con los elementos externos a ese sistema de
+              forma
+              bidireccional, es decir, que permite tanto que sea ingresada información desde un sistema externo, como
+              emitir
+              información a partir de ese sistema. Los Dispositivos Periféricos de entrada son todos aquellos
+              dispositivos
+              que permiten introducir datos o información en una computadora para que esta los procese u ordene.
+              <br /><br />
+              Funciones:
+              <br />
+              Un periférico de E/S es el que se utiliza para ingresar (E) datos a la computadora, y luego de ser
+              procesados
+              por la unidad central de procesamiento (CPU), genera la salida (S) de información. Su función es leer o
+              grabar, permanente o virtualmente, todo aquello que se haga con la computadora, para que pueda ser
+              utilizado
+              por los usuarios u otros sistemas.
+              <br /><br />
+              Tipos:
+              <br />
+              Dispositivos o periféricos de comunicación entre computadoras, tales como módems y tarjetas de red, por lo
+              general sirven para entrada y salida. También, los dispositivos de almacenamiento de datos, como los
+              discos
+              rígidos, la unidad de estado sólido, las memorias flash, las disqueteras, entre otros, se pueden
+              considerar
+              periféricos de entrada/salida.
+            </p>
+          </section>
+
+          <!-- Subtema 3.2.1 Entrada/Salida-->
+          <section id="3.2.1 Entrada/Salida">
+            <strong class="subtopic">3.2.1 Entrada/Salida</strong>
+            <p class="text">
+              La entrada/salida (E/S) se refiere al proceso de transferencia de datos entre un sistema informático y el
+              mundo exterior. Los dispositivos de entrada permiten al usuario ingresar datos al sistema,
+              <br /><br />
+              Dispositivos de entrada:
+              <br />
+              Teclado: Permite al usuario ingresar texto y comandos.
+              <br />
+              Ratón: Permite al usuario controlar el cursor en la pantalla y seleccionar elementos.
+              <br />
+              Pantalla táctil: Permite al usuario interactuar con la pantalla usando el dedo o un lápiz óptico.
+              <br />
+              Escáner: Permite al usuario digitalizar documentos e imágenes.
+              <br />
+              Micrófono: Permite al usuario ingresar audio.
+              <br />
+              Webcam: Permite al usuario capturar video.
+              <br />
+              Sensores: Permiten al sistema recopilar datos del entorno, como temperatura, luz y movimiento.
+              <br /><br />
+              Dispositivos de Salida
+              <br />
+              Monitor: Muestra información visual al usuario.
+              <br />
+              Impresora: Imprime documentos y fotos en papel.
+              <br />
+              Altavoz: Reproduce audio para el usuario.
+              <br />
+              Proyector: Proyecta imágenes y videos en una pantalla grande.
+              <br />
+              Actuador: Controla dispositivos físicos, como motores y luces.
+            </p>
+          </section>
+
+          <!-- 3.2.2 Almacenamiento.-->
+          <section id="3.2.2 Almacenamiento.">
+            <strong class="subtopic">3.2.2 Almacenamiento.</strong>
+            <p class="text">
+              El almacenamiento en computación se refiere a la capacidad de una computadora para guardar datos e
+              información. Los datos almacenados se pueden utilizar para ejecutar programas, acceder a información y
+              compartir archivos.
+              <br /><br />
+              Tipos de almacenamiento en computación:
+              <br />
+              Memoria principal (RAM):Es un tipo de memoria volátil que almacena datos e instrucciones que la CPU
+              necesita
+              para ejecutar programas. La RAM es rápida, pero pierde los datos cuando se apaga la computadora.
+              <br /><br />
+              Almacenamiento secundario: Es un tipo de memoria no volátil que almacena datos de forma permanente,
+              incluso
+              cuando se apaga la computadora. El almacenamiento secundario es más lento que la RAM, pero es mucho más
+              económico y puede almacenar una gran cantidad de datos. Existen varios tipos de almacenamiento secundario,
+              como:
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad3/alma.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- 3.2.3 Fuentes de alimentación.-->
+          <section id="3.2.3 Fuentes de alimentación.">
+            <strong class="subtopic">3.2.3 Fuentes de alimentación.</strong>
+            <p class="text">
+              Las fuentes de alimentación son dispositivos electrónicos que convierten la energía eléctrica de una forma
+              a
+              otra. Su función principal es proporcionar un voltaje y una corriente constantes a los dispositivos
+              electrónicos que necesitan energía para funcionar.
+              <br /><br />
+              Tipos de fuentes de alimentación:
+              <br /><br />
+              Fuentes de alimentación de CA (corriente alterna):Convierten la corriente alterna (CA) de la red eléctrica
+              en
+              corriente continua (CC) que necesitan la mayoría de los dispositivos electrónicos.
+              <br /><br />
+              Fuentes de alimentación de CC (corriente continua):Convierten la corriente continua (CC) de una fuente de
+              alimentación de batería o de otra fuente de CC en un voltaje y una corriente específicos que necesita un
+              dispositivo electrónico.
+              <br /><br />
+              Fuentes de alimentación reguladas:Mantienen un voltaje y una corriente constantes incluso si la entrada de
+              CA
+              o CC varía.
+              <br /><br />
+              Fuentes de alimentación no reguladas: No regulan el voltaje y la corriente de salida, lo que significa que
+              pueden variar dependiendo de la entrada de CA o CC.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad3/fuente.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- 3.3 Ambientes de servicio.-->
+          <section id="3.3 Ambientes de servicio.">
+            <strong class="subtopic">3.3 Ambientes de servicio. </strong>
+            <p class="text">
+              Los ambientes de servicio de cómputo se refieren a los entornos informáticos en los que se ejecutan y
+              prestan
+              servicios a los usuarios. Estos entornos pueden variar en cuanto a su tamaño, complejidad y propósito,
+              pero
+              todos comparten el objetivo de ofrecer una plataforma confiable y segura para la ejecución de aplicaciones
+              y
+              el acceso a datos.
+              <br /><br />
+              Tipos de ambientes de servicio de cómputo:
+              <br />
+              Entorno de desarrollo: Se utiliza para desarrollar y probar aplicaciones antes de que se implementen en un
+              entorno de producción.
+              <br /><br />
+              Entorno de pruebas: Se utiliza para probar aplicaciones en un entorno controlado antes de que se
+              implementen
+              en un entorno de producción.
+              <br /><br />
+              Entorno de producción: Se utiliza para ejecutar aplicaciones en vivo y proporcionar servicios a los
+              usuarios.
+              <br /><br />
+              Entorno de nube: Se utiliza para ejecutar aplicaciones y almacenar datos en servidores remotos a través de
+              Internet.
+              <br /><br />
+              Entorno local: Se utiliza para ejecutar aplicaciones y almacenar datos en una computadora personal o en
+              una
+              red local.
+            </p>
+          </section>
+
+          <!-- 3.3.1 Negocios.-->
+          <section id="3.3.1 Negocios.">
+            <strong class="subtopic">3.3.1 Negocios. </strong>
+            <p class="text">
+              Definitivamente, la tecnología en general ha sido la causa principal y la acción más directa para la
+              transformación del trabajo de las organizaciones en la posguerra del siglo XX. Tanto los bienes de
+              capital "duros" (computadores, teléfonos, videos, facsímiles, grabadoras, etc.), como los programas y
+              sistemas de información y comunicación en general, han incrementado enormemente la productividad y
+              eficiencia de las organizaciones.
+              Tenemos como ejemplos los siguientes: bases de datos en redes de todo orden y topología, sistemas de
+              reservaciones en aerolíneas, sistemas de contabilidad y nóminas, archivos clínicos en centros de salud,
+              sistemas de conmutación electrónica y un sin número de otras aplicaciones a procesos administrativos.
+            </p>
+          </section>
+
+          <!-- 3.3.2 Industria.-->
+          <section id="3.3.2 Industria.">
+            <strong class="subtopic">3.3.2 Industria.</strong>
+            <p class="text">
+              La industrialización de los servicios de tecnología de información va a redefinir el mercado en términos
+              de como las organizaciones evalúan, compran y seleccionan los servicios y como los vendedores desarrollan
+              y establecen precios de los servicios.
+              Para lograr esta estandarización, se requiere un enfoque hacia las soluciones genéricas y esto debe ser
+              responsabilidad de los proveedores, que deben de desarrollar, operar y administrar el resultado de estos
+              genéricos de TI.
+              Aunque los servicios de TI están en proceso de madurez, la madurez de la industria se ha incrementado en
+              aspectos evidentes, como la forma en que los servicios son implementados y administrados.
+            </p>
+          </section>
+
+          <!-- 3.3.3 Comercio electrónico.-->
+          <section id="3.3.3 Comercio electrónico.">
+            <strong class="subtopic">3.3.3 Comercio electrónico.</strong>
+            <p class="text">
+              El desarrollo de estas tecnologías y de las telecomunicaciones ha hecho que los intercambios de datos
+              crezcan a niveles extraordinarios, simplificándose cada vez más y creando nuevas formas de comercio, y
+              en este marco se desarrolla el Comercio Electrónico.
+              Se considera “Comercio Electrónico” al conjunto de aquellas transacciones comerciales y financieras
+              realizadas a través del procesamiento y la transmisión de información, incluyendo texto, sonido e
+              imagen.
+            </p>
+          </section>
+          <footer>&copy; 2024 - Carlos Alberto Peña Castillo</footer>
+        </main>
+      </div>
+    </div>
+
+  </div>
+</body>
+
 </html>

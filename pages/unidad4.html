@@ -1,20 +1,430 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/index.css" />
-    <title>Unidad 4</title>
-  </head>
-  <body>
-    <div id="app">
-      <header>
-        <h1>Unidad 4</h1>
-      </header>
-      <main>
-        
-      </main>
-      <footer>&copy; 2024 - Carlos Alberto Peña Castillo</footer>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/index.css" />
+  <title>Unidad 4</title>
+</head>
+
+<body>
+  <header>
+    <div class="buttons">
+      <button onclick="window.location.href = '../index.html';">Menu</button>
+      <button onclick="window.location.href = 'unidad1.html';">Unidad 1</button>
+      <button onclick="window.location.href = 'unidad2.html';">Unidad 2</button>
+      <button onclick="window.location.href = 'unidad3.html';">Unidad 3</button>
+      <button onclick="window.location.href = '';">Unidad 4</button>
+      <button onclick="window.location.href = 'practicas.html';">Practicas</button>
+      <button onclick="window.location.href = 'Tareas.html';">Tareas</button>
     </div>
-  </body>
+  </header>
+  <div id="app">
+    <div class="layout">
+      <nav>
+        <ol>
+          <li><a href="#4.1 Aspectos básicos de la computación paralela.">4.1 Aspectos básicos de la computación paralela </a></li><br/>
+          <li><a href="#4.2 Tipos de computación paralela.">4.2 Tipos de computación paralela.</a></li><br/>
+          <li><a href="#4.2.1 Clasificacion.">4.2.1 Clasificacion.</a></li><br/>
+          <li><a href="#4.2.2 Arquitectura de computadores secuenciales.">4.2.2 Arquitectura de computadores secuenciales.</a></li><br/>
+          <li><a href="#4.2.3 Organización de direcciones de memoria.">4.2.3 Organización de direcciones de memoria.</a></li><br/>
+          <li><a href="#4.3 Sistema de memoria compartida.">4.3 Sistema de memoria compartida.</a></li><br/>
+          <li><a href="#4.3.1.1 Redes de medio compartida.">4.3.1.1 Redes de medio compartida.</a></li><br/>
+          <li><a href="#4.3.1.2 Redes conmutadas.">4.3.1.2 Redes conmutadas.</a></li><br/>
+          <li><a href="#4.4 Sisitemas de memoria construida.">4.4 Sisitemas de memoria construida.</a></li><br/>
+          <li><a href="#4.5 Casos de estudio.">4.5 Casos de estudio.</a></li><br/>
+        </ol>
+      </nav>
+      <div class="center-cont">
+        <main class="contenido">
+          <h1>Unidad 4</h1>
+          <!-- Subtema 4.1 Aspectos básicos de la computación paralela-->
+          <section id="4.1 Aspectos básicos de la computación paralela.">
+            <strong class="subtopic">4.1 Aspectos básicos de la computación paralela</strong>
+            <p class="text">
+              La computación paralela es un paradigma de la informática en el que se ejecutan múltiples procesos de
+              manera simultánea para resolver problemas que requieren grandes cantidades de cálculo. Este enfoque
+              permite reducir significativamente el tiempo de ejecución de las tareas y aumentar la eficiencia del
+              procesamiento.
+              <br /><br />
+              Definición y Objetivo:
+              <br />
+              La computación paralela consiste en dividir un problema grande en partes más pequeñas que se pueden
+              ejecutar simultáneamente en múltiples procesadores. El objetivo principal es acelerar el procesamiento y
+              mejorar la eficiencia.
+              <br /><br />
+              Modelos de Paralelismo:
+              <br />
+              Existen varios modelos de paralelismo que describen cómo se pueden organizar y ejecutar los procesos en
+              paralelo:
+              <br /><br />
+            </p>
+            <ul>
+              <li> Paralelismo a nivel de datos: Donde las mismas operaciones se realizan simultáneamente en diferentes
+                piezas de datos. Un ejemplo es el procesamiento de imágenes, donde cada píxel puede ser procesado en
+                paralelo.</li>
+              <li> Paralelismo a nivel de tareas: Donde diferentes tareas o procesos se ejecutan en paralelo. Por
+                ejemplo,
+                diferentes etapas de un pipeline de procesamiento de datos pueden ser ejecutadas simultáneamente.</li>
+            </ul>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad4/para.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 4.2 Tipos de computación paralela.-->
+          <section id="4.2 Tipos de computación paralela.">
+            <strong class="subtopic">4.2 Tipos de computación paralela.</strong>
+            <p class="text">
+              La computación paralela se puede clasificar en varios tipos según diferentes criterios, como la
+              organización del hardware, la naturaleza de las tareas paralelas y el modelo de programación. A
+              continuación, se describen los principales tipos de computación paralela:
+              <br /><br />
+              Tipos:
+              <br /><br />
+              Segun la Organización por Hardware
+              <br />
+              Multiprocesadores de Memoria Compartida:
+              <br />
+              En estos sistemas, múltiples procesadores comparten una memoria común. Pueden acceder directamente a
+              cualquier ubicación de memoria, lo que facilita la comunicación entre procesadores. Existen dos subtipos
+              principales:
+            </p>
+            <br />
+            <ul>
+              <li> SMP (Symmetric Multiprocessing): Todos los procesadores tienen acceso equitativo a la memoria y a los
+                dispositivos de E/S.</li>
+              <li> NUMA (Non-Uniform Memory Access): La memoria se divide en módulos, donde cada módulo es más rápido
+                para acceder desde ciertos procesadores.</li>
+            </ul>
+            <br />
+            <p class="text">
+              Multiprocesadores de Memoria Distribuida:
+              <br />
+              Cada procesador tiene su propia memoria local y los procesadores se comunican entre sí mediante un
+              interconexión de red.
+            </p>
+            <br />
+            <ul>
+              <li> MPP (Massively Parallel Processors): Sistemas con un gran número de procesadores, cada uno con su
+                memoria local, conectados por una red de alta velocidad.</li>
+            </ul>
+            <br /><br />
+            <p class="text">
+              Según el Nivel de Paralelismo
+              <br />
+              Paralelismo a Nivel de Instrucción
+              <br />
+              Los procesadores ejecutan múltiples instrucciones al mismo tiempo durante un ciclo de reloj.
+              <br /><br />
+              Paralelismo a Nivel de Datos
+              <br />
+              Las mismas operaciones se aplican simultáneamente a diferentes datos.
+              <br /><br />
+            </p>
+            <br /><br />
+            <p class="text">
+              Según el Modelo de Programación
+              <br />
+              Programación Basada en Hilos:
+              <br />
+              Utiliza hilos para dividir una aplicación en partes concurrentes.
+              <br /><br />
+              Programación de Paso de Mensajes:
+              <br />
+              Los procesos se comunican mediante el envío y recepción de mensajes.
+              <br /><br />
+              Programación de Memoria Compartida:
+              <br />
+              Los procesos comparten un espacio de memoria común y se comunican mediante la lectura y escritura en esta
+              memoria.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad4/tipo.png" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 4.2.1 Clasificacion.-->
+          <section id="4.2.1 Clasificacion.">
+            <strong class="subtopic">4.2.1 Clasificacion.</strong>
+            <p class="text">
+              1. Segun la Organización por Hardware
+              <br />
+              Multiprocesadores de Memoria Compartida:
+              <br />
+              En estos sistemas, múltiples procesadores comparten una memoria común. Pueden acceder directamente a
+              cualquier ubicación de memoria, lo que facilita la comunicación entre procesadores. Existen dos subtipos
+              principales:
+            </p>
+            <br />
+            <ul>
+              <li> SMP (Symmetric Multiprocessing): Todos los procesadores tienen acceso equitativo a la memoria y a los
+                dispositivos de E/S.</li>
+              <li> NUMA (Non-Uniform Memory Access): La memoria se divide en módulos, donde cada módulo es más rápido
+                para acceder desde ciertos procesadores.</li>
+            </ul>
+            <br />
+            <p class="text">
+              Multiprocesadores de Memoria Distribuida:
+              <br />
+              Cada procesador tiene su propia memoria local y los procesadores se comunican entre sí mediante un
+              interconexión de red.
+            </p>
+            <br />
+            <ul>
+              <li> MPP (Massively Parallel Processors): Sistemas con un gran número de procesadores, cada uno con su
+                memoria local, conectados por una red de alta velocidad.</li>
+            </ul>
+            <br /><br />
+            <p class="text">
+              2. Según el Nivel de Paralelismo
+              <br />
+              Paralelismo a Nivel de Instrucción
+              <br />
+              Los procesadores ejecutan múltiples instrucciones al mismo tiempo durante un ciclo de reloj.
+              <br /><br />
+              Paralelismo a Nivel de Datos
+              <br />
+              Las mismas operaciones se aplican simultáneamente a diferentes datos.
+              <br /><br />
+            </p>
+            <br /><br />
+            <p class="text">
+              3. Según el Modelo de Programación
+              <br />
+              Programación Basada en Hilos:
+              <br />
+              Utiliza hilos para dividir una aplicación en partes concurrentes.
+              <br /><br />
+              Programación de Paso de Mensajes:
+              <br />
+              Los procesos se comunican mediante el envío y recepción de mensajes.
+              <br /><br />
+              Programación de Memoria Compartida:
+              <br />
+              Los procesos comparten un espacio de memoria común y se comunican mediante la lectura y escritura en esta
+              memoria.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad4/para.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 4.2.2 Arquitectura de computadores secuenciales.-->
+          <section id="4.2.2 Arquitectura de computadores secuenciales.">
+            <strong class="subtopic">4.2.2 Arquitectura de computadores secuenciales.</strong>
+            <p class="text">
+              La arquitectura de computadores secuenciales se refiere a la estructura y organización de sistemas
+              informáticos que ejecutan instrucciones de manera secuencial, es decir, una tras otra. Estos sistemas son
+              los más tradicionales y comunes, utilizados ampliamente antes del auge de la computación paralela y
+              todavía fundamentales en muchos contextos.
+              <br /><br />
+              Componentes Principales de una Computadora Secuencial
+              <br />
+              1. Unidad Central de Procesamiento (CPU):
+              <br />
+              La CPU es el cerebro de la computadora y se encarga de ejecutar las instrucciones de los programas. Está
+              compuesta por varias unidades funcionales:
+              <br /><br />
+            </p>
+            <ul>
+              <li>Unidad de Control (CU): Dirige la operación de la CPU, gestionando el flujo de datos entre la CPU y
+                otros componentes del sistema.</li>
+              <li>Unidad Aritmético-Lógica (ALU): Realiza operaciones aritméticas y lógicas.</li>
+              <li>Registros: Pequeñas unidades de almacenamiento dentro de la CPU que permiten el almacenamiento
+                temporal de datos y direcciones.</li>
+            </ul>
+            <br />
+            <p class="text">
+              2. Memoria Principal
+              La memoria principal o RAM (Random Access Memory) es donde se almacenan temporalmente los datos y
+              programas que la CPU necesita durante la ejecución.
+            </p>
+            <br />
+            <ul>
+              <li>Memoria Caché: Una memoria más rápida y pequeña que se encuentra entre la CPU y la RAM, utilizada para
+                acelerar el acceso a datos e instrucciones frecuentemente utilizados.</li>
+            </ul>
+            <br />
+            <p class="text">
+              3. Dispositivos de Entrada/Salida (I/O):
+              <br />
+              Permiten la interacción entre la computadora y el usuario o entre la computadora y otros sistemas.
+              Ejemplos incluyen teclados, ratones, monitores, impresoras y dispositivos de almacenamiento externo.
+            </p>
+
+            <p class="text">
+              Ciclo de Instrucción
+              <br />
+              El ciclo de instrucción es el proceso que sigue la CPU para ejecutar una instrucción
+              <br /><br />
+              Tipos de Arquitectura de Computadores Secuenciales:
+              <br /><br />
+              Arquitectura Von Neumann
+              <br />
+              En esta arquitectura, las instrucciones y los datos se almacenan en la misma memoria. Las características
+              principales incluyen:
+            </p>
+            <br />
+            <ul>
+              <li>Unidad de Memoria Única: La misma memoria se utiliza para almacenar datos e instrucciones.</li>
+              <li>Secuencialidad: Las instrucciones se ejecutan en orden secuencial.</li>
+              <li>Búsqueda y Decodificación: Las instrucciones se buscan y decodifican una a una.</li>
+            </ul>
+            <br />
+            <p class="text">
+              Modos de Dirección
+              <br />
+              Los modos de dirección definen cómo una instrucción especifica las direcciones de los operandos.
+            </p>
+            <br />
+            <ul>
+              <li>Directo: La dirección del operando está explícitamente en la instrucción.</li>
+              <li>Indirecto: La dirección de la memoria contiene la dirección del operando.</li>
+              <li>Inmediato: El operando está directamente en la instrucción.</li>
+              <li>Indexado: Utiliza un registro índice para modificar la dirección base.</li>
+            </ul>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad4/secu.png" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 4.2.3 Organización de direcciones de memoria.-->
+          <section id="4.2.3 Organización de direcciones de memoria.">
+            <strong class="subtopic">4.2.3 Organización de direcciones de memoria.</strong>
+            <p class="text">
+              La organización de direcciones de memoria en un sistema informático se refiere a cómo se gestionan y se
+              accede a las posiciones de memoria para almacenar y recuperar datos e instrucciones. Este aspecto es
+              crucial para el diseño eficiente de la arquitectura de computadores y la programación.
+              <br /><br />
+              Modos de Dirección
+              <br />
+              Los modos de dirección definen cómo una instrucción especifica las direcciones de los operandos.
+            </p>
+            <br />
+            <ul>
+              <li>Directo: La dirección del operando está explícitamente en la instrucción.</li>
+              <li>Indirecto: La dirección de la memoria contiene la dirección del operando.</li>
+              <li>Inmediato: El operando está directamente en la instrucción.</li>
+              <li>Indexado: Utiliza un registro índice para modificar la dirección base.</li>
+            </ul>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad4/dire.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 4.3 Sistema de memoria compartida.-->
+          <section id="4.3 Sistema de memoria compartida.">
+            <strong class="subtopic">4.3 Sistema de memoria compartida.</strong>
+            <p class="text">
+              El sistema de memoria compartida es un modelo de computación paralela en el que múltiples procesadores
+              pueden acceder y manipular un espacio de memoria común. Este tipo de sistema es ampliamente utilizado en
+              aplicaciones donde se necesita una alta interacción y comunicación entre procesos o hilos de ejecución
+              <br /><br />
+              En un sistema de memoria compartida, todos los procesadores tienen acceso a una memoria física común a
+              través de un bus o interconexión de alta velocidad. Los datos se almacenan en esta memoria compartida, y
+              cualquier procesador puede leer o escribir en ella. Esto permite una fácil comunicación y sincronización
+              entre los procesadores, pero también introduce desafíos en la gestión de la concurrencia y la coherencia
+              de los datos.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad4/compa.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 4.3.1.1 Redes de medio compartida.-->
+          <section id="4.3.1.1 Redes de medio compartida.">
+            <strong class="subtopic">4.3.1.1 Redes de medio compartida.</strong>
+            <p class="text">
+              Las redes de medio compartido son un tipo de red en la cual múltiples dispositivos comparten el mismo
+              medio físico para transmitir y recibir datos. Este tipo de red es fundamental en la organización de
+              sistemas de memoria compartida y ha sido ampliamente utilizado en redes de área local (LAN) tradicionales.
+              <br /><br />
+              En una red de medio compartido, todos los dispositivos conectados utilizan un medio físico común para
+              comunicarse. Este medio puede ser un cable coaxial, un segmento de cable de par trenzado, una fibra óptica
+              o incluso un canal de radiofrecuencia en el caso de redes inalámbricas. La transmisión de datos por este
+              medio se rige por protocolos que gestionan el acceso y evitan colisiones.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad4/red.PNG" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 4.3.1.2 Redes conmutadas.-->
+          <section id="4.3.1.2 Redes conmutadas.">
+            <strong class="subtopic">4.3.1.2 Redes conmutadas.</strong>
+            <p class="text">
+              Las redes conmutadas son un tipo de red donde la transmisión de datos entre dispositivos se realiza a
+              través de una serie de conmutadores (switches) que dirigen los paquetes de datos por el camino más
+              eficiente disponible. A diferencia de las redes de medio compartido, donde todos los dispositivos
+              comparten el mismo canal de comunicación, las redes conmutadas permiten una comunicación más directa y
+              eficiente entre dispositivos, mejorando el rendimiento y la escalabilidad.
+              <br /><br />
+              En una red conmutada, los dispositivos finales (como computadoras, servidores y otros equipos de red)
+              están conectados a conmutadores. Los conmutadores son dispositivos de red que operan en la capa de enlace
+              de datos (Capa 2 del modelo OSI) o en la capa de red (Capa 3 del modelo OSI), y su función principal es
+              recibir paquetes de datos y enviarlos al destino adecuado basado en la información de la dirección
+              contenida en cada paquete.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad4/conmu.png" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 4.4 Sisitemas de memoria construida.-->
+          <section id="4.4 Sisitemas de memoria construida.">
+            <strong class="subtopic">4.4 Sisitemas de memoria construida.</strong>
+            <p class="text">
+              Los sistemas de memoria distribuida son una arquitectura de computación paralela en la que cada procesador
+              tiene su propia memoria local y la comunicación entre procesadores se realiza a través de un sistema de
+              interconexión. A diferencia de los sistemas de memoria compartida, donde múltiples procesadores acceden a
+              un espacio de memoria común, en los sistemas de memoria distribuida, la memoria no es compartida
+              directamente.
+              <br /><br />
+              En un sistema de memoria distribuida, cada nodo del sistema tiene su propio procesador y memoria local, y
+              los nodos se comunican entre sí enviando mensajes a través de una red de interconexión. Este modelo es
+              común en clústeres de computadoras, supercomputadoras y algunos sistemas multiprocesador de gran escala.
+            </p>
+            <figure class="topic-figure">
+              <img class="topic-img" src="../images/unidad4/compar.jpg" alt="" />
+            </figure>
+          </section>
+
+          <!-- Subtema 4.5 Casos de estudio.-->
+          <section id="4.5 Casos de estudio.">
+            <strong class="subtopic">4.5 Casos de estudio.</strong>
+            <p class="text">
+              Proyecto Genoma humano
+              <br />
+              Descripción: El Proyecto Genoma Humano fue un esfuerzo colaborativo internacional para mapear y secuenciar
+              el genoma humano.
+              <br /><br />
+              Arquitectura Paralela Utilizada: Se utilizaron supercomputadoras y clústeres de alta capacidad de
+              procesamiento distribuido para realizar la secuenciación del ADN de manera eficiente.
+              <br /><br />
+              Ventajas: La arquitectura paralela permitió reducir significativamente el tiempo necesario para completar
+              el proyecto, acelerando así la investigación genómica y el desarrollo de tratamientos médicos
+              personalizados.
+              <br /><br />
+              Simulaciones Climáticas
+              <br />
+              Descripción: Las simulaciones climáticas se utilizan para predecir patrones climáticos a largo plazo y
+              entender el impacto de diferentes variables en el clima global.
+              <br /><br />
+              Arquitectura Paralela Utilizada: Supercomputadoras con arquitecturas de memoria distribuida se utilizan
+              para ejecutar modelos climáticos complejos que requieren un alto nivel de paralelismo.
+              <br /><br />
+              Ventajas: La capacidad de procesamiento masivo proporcionada por la arquitectura paralela permite realizar
+              simulaciones climáticas detalladas a una escala global y regional, ayudando a los científicos a comprender
+              mejor el cambio climático y sus efectos.
+            </p>
+          </section>
+          <footer>&copy; 2024 - Carlos Alberto Peña Castillo</footer>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
